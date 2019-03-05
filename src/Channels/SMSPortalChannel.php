@@ -2,6 +2,7 @@
 
 namespace Illuminate\Notifications\Channels;
 
+use SMSPortal\RestClient;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SMSPortalMessage;
 
@@ -17,12 +18,11 @@ class SMSPortalChannel
     /**
     * Create a new SMSPortal channel instance.
     *
-    * @param  \SMSPortal\Client  $smsPortal
     * @return void
     */
-    public function __construct(SMSPortalClient $smsPortal)
+    public function __construct()
     {
-        $this->smsPortal = $smsPortal;
+        $this->smsPortal = new RestClient();
     }
 
     /**
@@ -30,9 +30,9 @@ class SMSPortalChannel
     *
     * @param  mixed  $notifiable
     * @param  \Illuminate\Notifications\Notification  $notification
-    * @return \Nexmo\Message\Message
+    * @return \SMSPortal\RestClient
     */
-    public function sent($notifiable, Notification $notification)
+    public function send($notifiable, Notification $notification)
     {
         if (!$to = $notifiable->routeNotificationFor('smsportal', $notification)) {
             return;

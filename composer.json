@@ -1,5 +1,5 @@
 {
-  "name": "neolikotsi/laravel-smsportal-v1",
+  "name": "neolikotsi/laravel-smsportal",
   "description": "SMS Portal Notification Channel for laravwl",
   "keywords": ["laravel", "notifications", "sms portal"],
   "license": "MIT",

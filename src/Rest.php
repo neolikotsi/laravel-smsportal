@@ -60,6 +60,12 @@ class RestClient
         return $this;
     }
 
+    /**
+     * Submit API request to send SMS
+     *
+     * @param array $options
+     * @return array
+     */
     public function send(array $options)
     {
         $this->authorize();
@@ -72,9 +78,7 @@ class RestClient
             'headers' => ['Authorization' => 'Bearer ' . $this->apiToken]
         ]);
 
-        $response = $this->getResponse($response->getBody());
-
-        return $this;
+        return $this->getResponse($response->getBody());
     }
 
     public function balance()
