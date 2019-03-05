@@ -16,7 +16,7 @@ class SMSPortalServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/smsportal.php' => config_path('smsportal.php')
-        ], 'config');
+        ], 'laravel-smsportal');
     }
 
     public function register()
