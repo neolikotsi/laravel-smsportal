@@ -33,6 +33,7 @@ class SMSPortalMessage
     public function content($content)
     {
         $this->content = $content;
+
         return $this;
     }
 }
