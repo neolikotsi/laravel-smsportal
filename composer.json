@@ -1,6 +1,6 @@
 {
   "name": "neolikotsi/laravel-smsportal",
-  "description": "SMS Portal Notification Channel for laravwl",
+  "description": "SMS Portal Notification Channel for laravel",
   "keywords": ["laravel", "notifications", "sms portal"],
   "license": "MIT",
   "authors": [{
