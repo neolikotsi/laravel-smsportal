@@ -5,18 +5,17 @@
   "license": "MIT",
   "authors": [{
     "name": "Neo Likotsi",
-    "email": "nlikotsi5@gmail.com"
+    "email": "nlikotsi5@gmail.com",
+    "role": "Developer"
   }],
   "require": {
     "php": "^7.1.3",
-    "illuminate/config": "~5.0",
-    "illuminate/support": "~5.0"
+    "illuminate/config": "~5.0"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "~5.0",
     "illuminate/notifications": "~5.7",
-    "mockery/mockery": "^1.0",
-    "phpunit/phpunit": "^7.0"
+    "mockery/mockery": "^1.0"
   },
   "autoload": {
     "psr-4": {
