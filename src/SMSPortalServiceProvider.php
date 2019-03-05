@@ -3,6 +3,7 @@
 namespace Illuminate\Notifications;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Notification;
 
 class SMSPortalServiceProvider extends ServiceProvider
 {
