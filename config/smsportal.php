@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Your package config would go here
+ * The SMSPortal api credentials
  */
 
 return [
