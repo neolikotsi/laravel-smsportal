@@ -23,7 +23,6 @@ class RestClient
      * @var string
      */
     private $apiToken = '';
-    private $responseData;
     private $client;
 
     /**
@@ -53,9 +52,9 @@ class RestClient
             'headers' => ['Authorization' => 'Basic ' . base64_encode(config('smsportal.client_id') . ':' . config('smsportal.secret'))]
         ]);
 
-        $this->responseData = $this->getResponse($response->getBody());
+        $responseData = $this->getResponse($response->getBody());
 
-        $this->apiToken = $this->responseData['token'];
+        $this->apiToken = $responseData['token'];
 
         return $this;
     }
@@ -88,21 +87,19 @@ class RestClient
             'headers' => ['Authorization' => 'Bearer ' . $this->apiToken]
         ]);
 
-        $response = $this->getResponse($response->getBody());
+        $responseData = $this->getResponse($response->getBody());
 
-        return $response['number'];
+        return $responseData['number'];
     }
 
     /**
      * Tranform response string to responseData
      *
      * @param string $responseBody
-     * @return this
+     * @return array
      */
     private function getResponse(string $responseBody)
     {
-        $this->responseData = json_decode($responseBody, true);
-
-        return $this;
+        return json_decode($responseBody, true);
     }
 }
