@@ -48,7 +48,7 @@ class RestClient
      */
     public function authorize()
     {
-        $response = $this->client->request(static::HTTP_GET, static::BASE_REST + 'Authentication', [
+        $response = $this->client->request(static::HTTP_GET, static::BASE_REST . 'Authentication', [
             'http_errors' => false,
             'headers' => ['Authorization' => 'Basic ' . base64_encode(config('smsportal.client_id') . ':' . config('smsportal.secret'))]
         ]);
@@ -72,7 +72,7 @@ class RestClient
 
         $requestBody = ['messages' => [$options]];
 
-        $response = $this->client->request(static::HTTP_POST, static::BASE_REST + 'BulkMessages', [
+        $response = $this->client->request(static::HTTP_POST, static::BASE_REST . 'BulkMessages', [
             'json' => $requestBody,
             'http_errors' => false,
             'headers' => ['Authorization' => 'Bearer ' . $this->apiToken]
@@ -83,7 +83,7 @@ class RestClient
 
     public function balance()
     {
-        $response = $this->client->request(static::HTTP_GET, static::BASE_REST + 'Balance', [
+        $response = $this->client->request(static::HTTP_GET, static::BASE_REST . 'Balance', [
             'http_errors' => false,
             'headers' => ['Authorization' => 'Bearer ' . $this->apiToken]
         ]);
