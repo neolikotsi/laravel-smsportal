@@ -4,7 +4,7 @@
 
 ## Installation
 
-Send SMS notifications in Laravel powered by [SMSPortal](https://www.smsportal.com/). Before you can send notifications via SMSPorta;, you need to install the `neolikotsi/laravel-smsportal` Composer package:
+Send SMS notifications in Laravel powered by [SMSPortal](https://www.smsportal.com/). Before you can send notifications via SMSPortal, you need to install the `neolikotsi/laravel-smsportal` Composer package:
 
 ```bash
 composer require neolikotsi/laravel-smsportal
@@ -47,4 +47,4 @@ public function toSmsPortal($notifiable)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
