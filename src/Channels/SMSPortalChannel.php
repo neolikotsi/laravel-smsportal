@@ -2,9 +2,9 @@
 
 namespace Illuminate\Notifications\Channels;
 
-use SMSPortal\RestClient;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SMSPortalMessage;
+use SMSPortal\RestClient;
 
 class SMSPortalChannel
 {
@@ -22,7 +22,7 @@ class SMSPortalChannel
     */
     public function __construct()
     {
-        $this->smsPortal = new RestClient();
+        $this->smsPortal = new RestClient;
     }
 
     /**

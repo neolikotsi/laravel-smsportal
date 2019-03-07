@@ -33,7 +33,7 @@ class RestClient
      */
     public function __construct()
     {
-        $this->client = new \GuzzleHttp\Client();
+        $this->client = new \GuzzleHttp\Client;
     }
 
     public function message()
