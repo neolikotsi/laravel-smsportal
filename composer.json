@@ -10,7 +10,8 @@
   }],
   "require": {
     "php": "^7.1.3",
-    "illuminate/config": "~5.0"
+    "illuminate/config": "~5.0",
+    "neolikotsi/php-smsportal": "^1.0"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "~5.0",
@@ -19,8 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Illuminate\\Notifications\\": "src/",
-      "SMSPortal\\": "src/"
+      "Illuminate\\Notifications\\": "src/"
     }
   },
   "autoload-dev": {

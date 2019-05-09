@@ -2,9 +2,9 @@
 
 namespace Illuminate\Notifications\Channels;
 
+use NeoLikotsi\SMSPortal\RestClient;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SMSPortalMessage;
-use SMSPortal\RestClient;
 
 class SMSPortalChannel
 {
@@ -22,7 +22,7 @@ class SMSPortalChannel
     */
     public function __construct()
     {
-        $this->smsPortal = new RestClient;
+        $this->smsPortal = new RestClient(config('smsportal.client_id'), config('smsportal.secret'), config('smsportal.base_uri'));
     }
 
     /**
@@ -30,7 +30,7 @@ class SMSPortalChannel
     *
     * @param  mixed  $notifiable
     * @param  \Illuminate\Notifications\Notification  $notification
-    * @return \SMSPortal\RestClient
+    * @return \NeoLikotsi\SMSPortal\RestClient
     */
     public function send($notifiable, Notification $notification)
     {
