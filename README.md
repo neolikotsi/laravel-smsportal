@@ -46,6 +46,22 @@ public function toSmsPortal($notifiable)
 }
 ```
 
+## Adding as Delivery Channel
+Add the channel `smsportal` to the notification delivery channels.
+
+```php
+/**
+ * Get the notification's delivery channels.
+ *
+ * @param  mixed  $notifiable
+ * @return array
+ */
+public function via($notifiable)
+{
+    return ['mail', 'smsportal'];
+}
+```
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
