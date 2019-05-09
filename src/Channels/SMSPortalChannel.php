@@ -11,7 +11,7 @@ class SMSPortalChannel
     /**
      * The SMSPortal client instance
      *
-     * @var [type]
+     * @var RestClient
      */
     protected $smsPortal;
 
@@ -45,8 +45,10 @@ class SMSPortalChannel
         }
 
         return $this->smsPortal->message()->send([
-            'destination' => $to,
-            'content' => trim($message->content),
+            'messages' => [
+                'destination' => $to,
+                'content' => trim($message->content),
+            ]
         ]);
     }
 }

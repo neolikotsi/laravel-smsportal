@@ -224,16 +224,16 @@
         },
         {
             "name": "neolikotsi/php-smsportal",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neolikotsi/php-smsportal.git",
-                "reference": "4d609394dcf170822933ec3d6c63378b6ce9b1ef"
+                "reference": "72ef3268b92014f0a85e2adb13d8c8d03009c19c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neolikotsi/php-smsportal/zipball/4d609394dcf170822933ec3d6c63378b6ce9b1ef",
-                "reference": "4d609394dcf170822933ec3d6c63378b6ce9b1ef",
+                "url": "https://api.github.com/repos/neolikotsi/php-smsportal/zipball/72ef3268b92014f0a85e2adb13d8c8d03009c19c",
+                "reference": "72ef3268b92014f0a85e2adb13d8c8d03009c19c",
                 "shasum": ""
             },
             "require": {
@@ -266,7 +266,7 @@
                 "sms portal",
                 "sms-client api"
             ],
-            "time": "2019-05-09T11:26:50+00:00"
+            "time": "2019-05-09T12:04:08+00:00"
         },
         {
             "name": "nesbot/carbon",
