@@ -19,9 +19,9 @@ class SMSPortalMessage
      * @param  string  $content
      * @return void
      */
-    public function __construct($content = '')
+    public function __construct(string $content = '')
     {
-        $this->content = $content;
+        $this->content($content);
     }
 
     /**
@@ -30,9 +30,9 @@ class SMSPortalMessage
      * @param  string  $content
      * @return $this
      */
-    public function content($content)
+    public function content(string $content)
     {
-        $this->content = $content;
+        $this->content = str_replace('<br>', '|', nl2br($content, false));
 
         return $this;
     }
