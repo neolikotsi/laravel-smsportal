@@ -34,6 +34,10 @@ class SMSPortalChannel
     */
     public function send($notifiable, Notification $notification)
     {
+        if (app()->environment()) {
+            return;
+        }
+
         if (!$to = $notifiable->routeNotificationFor('smsportal', $notification)) {
             return;
         }
