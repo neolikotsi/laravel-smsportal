@@ -47,7 +47,7 @@ class SMSPortalChannel
         return $this->smsPortal->message()->send([
             'messages' => [
                 'destination' => $to,
-                'content' => trim($message->content),
+                'content' => $message->content,
             ]
         ]);
     }
