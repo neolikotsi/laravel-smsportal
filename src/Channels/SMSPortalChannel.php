@@ -34,7 +34,7 @@ class SMSPortalChannel
     */
     public function send($notifiable, Notification $notification)
     {
-        if (app()->environment(config('smsportal.delivery_environment'))) {
+        if (\App::environment(config('smsportal.delivery_environment'))) {
             return;
         }
 
