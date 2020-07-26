@@ -22,13 +22,20 @@ php artisan vendor:publish --provider="Illuminate\Notifications\SMSPortalService
 ```
 
 This is the contents of the published config file:
+Delivery environment settings can be enabled via environment specific flags or just the `SMS_PORTAL_DELIVERY_ENABLED` flag
+Note: If your environment differs from the options below, simply add in your own env as a key with the value being true/false
 
 ```php
 return [
     'client_id' => env('SMS_PORTAL_CLIENT_ID'),
     'secret' => env('SMS_PORTAL_SECRET'),
     'base_uri' => env('SMS_PORTAL_URL', 'https://rest.smsportal.com/v1/'),
-    'delivery_environment' => env('SMS_PORTAL_ENVIRONMENT', 'production'),
+    'delivery_environment' => [
+            'production' => env('SMS_PORTAL_DELIVERY_ENABLED', env('SMS_PORTAL_DELIVERY_ENABLED_PRODUCTION', true)),
+            'staging' => env('SMS_PORTAL_DELIVERY_ENABLED', env('SMS_PORTAL_DELIVERY_ENABLED_STAGING', true)),
+            'develop' => env('SMS_PORTAL_DELIVERY_ENABLED', env('SMS_PORTAL_DELIVERY_ENABLED_DEVELOP', true)),
+            'testing' => env('SMS_PORTAL_DELIVERY_ENABLED', env('SMS_PORTAL_DELIVERY_ENABLED_TESTING', false)),
+            ],
 ];
 ```
 
