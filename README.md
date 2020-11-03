@@ -3,7 +3,7 @@
 ## SMS Notifications
 
 ## Version Support
-Laravel 5.5+, 6, 7
+Laravel 8
 
 ## Installation
 
